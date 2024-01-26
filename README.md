@@ -1,4 +1,4 @@
-Timeline giving based on birth year
+Basic timeline giving based on birth year
 
 in order to run make sure to download node.js
 
