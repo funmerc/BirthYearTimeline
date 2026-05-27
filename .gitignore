@@ -10,9 +10,14 @@
 
 # production
 /build
+/dist
+
+# vite
+node_modules/.vite
 
 # misc
 .DS_Store
+.idea/
 .env.local
 .env.development.local
 .env.test.local

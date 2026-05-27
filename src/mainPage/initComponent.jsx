@@ -42,19 +42,19 @@ class InitComponent extends Component {
     return ( 
         <div>
             <InputGroup className="mb-3" >
-                <InputGroup.Prepend>
-                    <InputGroup.Text id="birthYearInputField" className="input-group-cstm">Birth Year</InputGroup.Text>
-                </InputGroup.Prepend>
+                <InputGroup.Text id="birthYearInputField" className="input-group-cstm">Birth Year</InputGroup.Text>
                 <FormControl
                     aria-label="birthYearInput"
                     aria-describedby="birthYearInputField"
                     onChange={ this.birthYearUpdated }
                 />
             </InputGroup>
-            <Button variant="info" size="sm" block onClick={ this.showMyYearsSelected }>
-                Show my years
-            </Button>
-        </div>  
+            <div className="d-grid">
+                <Button variant="info" size="sm" onClick={ this.showMyYearsSelected }>
+                    Show my years
+                </Button>
+            </div>
+        </div>
     );
   }
 

@@ -1,8 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
 
 //Redux
 import { createStore, applyMiddleware } from 'redux';
@@ -10,11 +9,11 @@ import rootReducer from './reducers/rootReducer';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 
-ReactDOM.render(
+const root = createRoot( document.getElementById('root') );
+root.render(
     <Provider store={ getStore() }>
         <App />
-    </Provider>, 
-    document.getElementById('root')
+    </Provider>
 );
 
 function getStore(beginState = {}){
@@ -24,5 +23,3 @@ function getStore(beginState = {}){
         applyMiddleware(thunk)
     );
 }
-
-serviceWorker.unregister();
